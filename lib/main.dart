@@ -136,6 +136,16 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Decrement',
         child: const Icon(Icons.remove),
           ),
+          const SizedBox(height: 10),
+          FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            _counter = 0;
+          });
+        },
+        tooltip: 'Reset',
+        child: const Icon(Icons.refresh),
+          ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
