@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:revision_counter/pages/books.dart';
 
 void main() {
   runApp(const MyApp());
@@ -155,6 +156,17 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         tooltip: 'Reset',
         child: const Icon(Icons.refresh),
+          ),
+          const SizedBox(height: 10),
+          FloatingActionButton(
+          onPressed: () {
+            Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const BooksPage()),
+            );
+          },
+          tooltip: 'Books Page',
+          child: const Icon(Icons.book),
           ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
